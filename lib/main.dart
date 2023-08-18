@@ -1,17 +1,24 @@
 import 'package:flutter/material.dart';
-import 'Login.dart';
-import 'Signup.dart';
 
-void main() => runApp(MyApp());
+import 'HomePage.dart';
+import 'Login.dart';
+
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Login(),
-      routes: {'/sinup': (_) => Signup()},
+      title: 'Flutter Demo',
+      theme: ThemeData(),
+      home: Loginpage(),
+      routes: {'/homepage': (_) => HomePage()},
     );
   }
 }
